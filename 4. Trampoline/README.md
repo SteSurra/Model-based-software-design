@@ -45,9 +45,9 @@ Shutdown
 Exiting virtual platform.**
 
 
-# Trampoline examples for Posix Targets
+# Trampoline for Posix Targets
 
-Here an examples for POSIX target running Trampoline inside a Unix process. 
+POSIX target running Trampoline inside a Unix process. 
 
 To simulate the environment, another process runs ViPER (Virtual Processor EmulatoR). Viper can emulate a timer and send periodically a signal to the Trampoline process. This way, Trampoline get a SystemCounter.
 

@@ -79,7 +79,7 @@ Or if you run the example on OSX instead of Linux,
 
 Then, the makefile is generated, and it will call goil again when the .oil file is updated
 
-    $ ./make.py -s
+    $ ./make.py
 
 Then, run the trampoline binary. This program will start another process to run ViPER silently.
 

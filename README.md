@@ -13,5 +13,10 @@ The sensor is equivalent to HC-SR04:
 - The ranging accuracy can reach to 3mm
 
 See data sheet at the following URL:
+https://www.electroschematics.com/wp-content/uploads/2013/07/HCSR04-datasheet-version-1.pdf
+
+```
+(21 day high + 21 day low) / 2
+```
 
 

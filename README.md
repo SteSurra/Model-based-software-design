@@ -15,8 +15,17 @@ The sensor is equivalent to HC-SR04:
 See data sheet at the following URL:
 https://www.electroschematics.com/wp-content/uploads/2013/07/HCSR04-datasheet-version-1.pdf
 
+
+The behavior of the Sensor is as follows:
+-The Ranging Estimator generates a pulse on the Trig signal with pulse duration of at least 10 μs
+-The HC-SR04 device produces a response on the Echo signal. The pulse duration is proportional to the measured distance according to the following formula:
 ```
-(21 day high + 21 day low) / 2
+ 𝑑𝑖𝑠𝑡𝑎𝑛𝑐𝑒 𝑐𝑚 =
+𝐸𝑐h𝑜 𝑝𝑢𝑙𝑠𝑒 𝑑𝑢𝑟𝑎𝑡𝑖𝑜𝑛 [𝜇𝑠]
+58
 ```
+- Triggering pulses shall be distant at least 60ms to prevent echos
+
+
 
 

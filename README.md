@@ -34,9 +34,9 @@ The ranging estimator measures the distance (by taking 4 consecutive measures an
 <H2> Work products </H2>
 
 1. Simulink project containing two referenced subsystems properly interconnected:
-  1. <ins> Plant </ins>: containing a model of the ultrasonic ranging sensor for simulation purposes only. The distance is
+  - <ins> Plant </ins>: containing a model of the ultrasonic ranging sensor for simulation purposes only. The distance is
 controllable using a knob to provide al the possible scenarios
-  2. <ins> Controller </ins>: containing a model of the ranging estimator for code generation purposes
+  - <ins> Controller </ins>: containing a model of the ranging estimator for code generation purposes
 2. C code for the controller obtained through code generation(using compact file placement and reusable function interface)
 
 

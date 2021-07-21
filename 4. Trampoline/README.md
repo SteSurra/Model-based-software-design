@@ -51,8 +51,6 @@ POSIX target running Trampoline inside a Unix process.
 
 To simulate the environment, another process runs ViPER (Virtual Processor EmulatoR). Viper can emulate a timer and send periodically a signal to the Trampoline process. This way, Trampoline get a SystemCounter.
 
-More information is available on this (not really up-to-date) [publication](http://trampoline.rts-software.org/IMG/pdf/trampoline.pdf) at 11th International Conference on Emerging Technologies and Factory Automation (ETFA'06) (in particular, see section 6.2 and figure 4)
-
 ## Building ViPER
 on UNIX shell:
 

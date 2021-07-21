@@ -20,12 +20,17 @@ Describing in more detail, the plant is developed through a stateflow consisting
 4. ENABLED: the Echo signal is generated as soon as the trigger signal goes low. The ENABLED state contains two further states: HIGH in which the Echo signal is generated proportional to the distance driven by the knob and LOW in which it passes as soon as the measurement is finished.
 
 The time before passing to the LOW state is calculated by: 
-,,,
-"distance * 58"
-,,,
+```
+time = distance * 58
+```
+and it represents the duration of the Echo signal expressed in [usec].
 
-and it represents the duration of the Echo signal expressed in usec.
-We note that no controls have been done to verify that the transition takes place within 100 [ms] (ie between one trigger instant and the next) since the high limit of 450 [cm] imposed by the knob precludes this possibility: 450 * 58 = 26.1 [ms]. In a real case it should be considered.
+We note that no controls have been done to verify that the transition takes place within 100 [ms] (ie between one trigger instant and the next) since the high limit of 450 [cm] imposed by the knob precludes this possibility: 
+```
+450 * 58 = 26.1 [ms]. 
+```
+In a real case it should be considered.
+
 Finally it returns to the initial state WAIT_TO_RISE.
 
 

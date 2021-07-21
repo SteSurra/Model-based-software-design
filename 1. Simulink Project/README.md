@@ -1,8 +1,8 @@
-<H1> Simulink project work-logic
+<H1> Simulink project work-logic </H1>
 
 As required in the assignment guidelines there are two referenced subsystems interconnected: plant and controller.
 
-<H2> plant
+<H2> plant </H2>
 
 Plant containing a model of the ultrasonic ranging sensor whose essential parts are: 
 1. Trigger signal that drives the start of the measurement.

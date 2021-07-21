@@ -60,7 +60,7 @@ on UNIX shell:
 
 It is recommended to get the path to ViPER in the environment variables, and define in the ~/.bashrc or ~/.profile the command:
 
-    $ export VIPER_PATH=PATH_TO_TRAMPOLINE/viper
+    $ export VIPER_PATH=~/trampoline/viper/
 
 export VIPER_PATH=~/trampoline/viper/
 
@@ -85,31 +85,7 @@ Then, run the trampoline binary. This program will start another process to run 
 
     $ ./periodic_exe
 
-
-export VIPER_PATH=~/trampoline/viper/
-
-./make.py clean
-
-
-
-DA QUI
-
-```
-$ goil --target=posix/darwin  --templates=../../../goil/templates/ periodic.oil
-```
-
-```
-$ ./make.py
-```
-
-```
-$ export VIPER_PATH=~/trampoline/viper/
-```
-
-```
-$ ./periodic_exe
-```
-
+## More
 ```
 ./make.py clean
 ```

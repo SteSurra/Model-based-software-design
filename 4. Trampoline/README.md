@@ -62,8 +62,6 @@ It is recommended to get the path to ViPER in the environment variables, and def
 
     $ export VIPER_PATH=~/trampoline/viper/
 
-export VIPER_PATH=~/trampoline/viper/
-
 ## Run example
 
 Examples are easy to run:

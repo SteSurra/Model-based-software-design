@@ -27,8 +27,8 @@ distance [cm] = Echo pulse duration [𝜇𝑠] / 58
 <H2> Ranging estimator </H2>
 
 The ranging estimator measures the distance (by taking 4 consecutive measures and computing the average), and generates an output as follows:
-- In case the measure is in between 10cm and 100 cm the Level output blinks with frequency 10 Hz and duty cycle from 10% to 100% depending on the measurement (10cm=10%, 100cm=100%).
-- In case the measurement is outside below 10cm or higher than 100 cm the Level output blinks with frequency 2 Hz and duty cycle 50%.
+- In case the measure is in between 10cm and 100 cm the Level output blinks with frequency 10 Hz and duty cycle from 10% to 100% depending on the measurement (10cm=10%, 100cm=100%)
+- In case the measurement is outside below 10cm or higher than 100 cm the Level output blinks with frequency 2 Hz and duty cycle 50%
 - In case the sensor is disconnected (no measure is received), the Level output blinks with frequency 1 Hz and duty cycle 50%
 
 <H2> Work products </H2>
@@ -37,7 +37,9 @@ The ranging estimator measures the distance (by taking 4 consecutive measures an
   - <ins> Plant </ins>: containing a model of the ultrasonic ranging sensor for simulation purposes only. The distance is
 controllable using a knob to provide al the possible scenarios
   - <ins> Controller </ins>: containing a model of the ranging estimator for code generation purposes
-- C code for the controller obtained through code generation(using compact file placement and reusable function interface)
+- C code for the controller obtained through code generation (using compact file placement and reusable function interface)
+- GoogleTest-based unit testing for the controller code providing 100% statement and 100% branch coverage
+- Source code that integrates the generated code into the Trampoline RTOS. The ultrasonic sensor is simulated in C code, and the Level output is printed on the console.
 
 
 

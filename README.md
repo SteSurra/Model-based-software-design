@@ -1,4 +1,4 @@
-# <H1> Level-indicator </H1<
+# <H1> Level-indicator </H1>
 
 This is the model-based software design course project of the year 2020/2021.
 

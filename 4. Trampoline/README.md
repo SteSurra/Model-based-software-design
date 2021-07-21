@@ -28,8 +28,8 @@ export VIPER_PATH=~/trampoline/viper/
 ```
 
 If you completed all the operations correctly you shall see the following output:
-**
-Activation #1
+
+**Activation #1
 Activation #2
 Activation #3
 Activation #4
@@ -39,8 +39,8 @@ Activation #7
 Activation #8
 Activation #9
 Shutdown
-Exiting virtual platform.
-**
+Exiting virtual platform.**
+
 
 ```
 $ goil --target=posix/darwin  --templates=../../../goil/templates/ periodic.oil

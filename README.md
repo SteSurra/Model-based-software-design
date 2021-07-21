@@ -11,3 +11,7 @@ The goal of this project is to implement a level indicator, which is composed of
 The sensor is equivalent to HC-SR04:
 - It provides 2cm - 400cm non-contact measurement function
 - The ranging accuracy can reach to 3mm
+
+See data sheet at the following URL:
+
+

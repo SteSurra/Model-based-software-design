@@ -21,9 +21,9 @@ Describing in more detail, the plant is developed through a stateflow consisting
 
 The time before passing to the LOW state is calculated by: 
 ```
-time = distance * 58
+time = distance * 58 [𝜇𝑠]
 ```
-and it represents the duration of the Echo signal expressed in [usec].
+and it represents the duration of the Echo signal expressed in 𝜇𝑠.
 
 We note that no controls have been done to verify that the transition takes place within 100 [ms] (ie between one trigger instant and the next) since the high limit of 450 [cm] imposed by the knob precludes this possibility: 
 ```

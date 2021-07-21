@@ -32,12 +32,9 @@ export VIPER_PATH=~/trampoline/viper/
 
 If you completed all the operations correctly you shall see the following output:
 
-**Activation #1**
-
-**Activation #2**
-
-**Activation #3**
-
+**Activation #1
+Activation #2
+Activation #3
 Activation #4
 Activation #5
 Activation #6

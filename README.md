@@ -1,6 +1,6 @@
 # <H1> Level-indicator </H1>
 
-This is the model-based software design course project of the year 2020/2021.
+This is the model-based software design course project of the year 2020/2021, developed using MATLAB version 2020b.
 
 The goal of this project is to implement a level indicator, which is composed of the following elements: 
 1. Ultrasonic Ranging Sensor

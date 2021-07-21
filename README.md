@@ -31,6 +31,13 @@ The ranging estimator measures the distance (by taking 4 consecutive measures an
 - In case the measurement is outside below 10cm or higher than 100 cm the Level output blinks with frequency 2 Hz and duty cycle 50%.
 - In case the sensor is disconnected (no measure is received), the Level output blinks with frequency 1 Hz and duty cycle 50%
 
+<H2> Work products </H2>
+
+Simulink project containing two referenced subsystems properly interconnected:
+1. Plant: containing a model of the ultrasonic ranging sensor for simulation purposes only. The distance is
+controllable using a knob to provide al the possible scenarios
+2. Controller: containing a model of the ranging estimator for code generation purposes
+
 
 
 

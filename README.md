@@ -25,6 +25,7 @@ distance [cm] = Echo pulse duration [𝜇𝑠] / 58
 - Triggering pulses shall be distant at least 60ms to prevent echos
 
 <H2> Ranging estimator </H2>
+
 The ranging estimator measures the distance (by taking 4 consecutive measures and computing the average), and generates an output as follows:
 - In case the measure is in between 10cm and 100 cm the Level output blinks with frequency 10 Hz and duty cycle from 10% to 100% depending on the measurement (10cm=10%, 100cm=100%).
 - In case the measurement is outside below 10cm or higher than 100 cm the Level output blinks with frequency 2 Hz and duty cycle 50%.

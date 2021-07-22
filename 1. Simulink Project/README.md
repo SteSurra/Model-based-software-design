@@ -1,6 +1,6 @@
 <H1> Simulink project work-logic </H1>
 
-As required in the assignment guidelines there are two referenced subsystems interconnected: plant and controller.
+There are two referenced subsystems interconnected: plant and controller.
 
 <H2> Plant </H2>
 

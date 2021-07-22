@@ -45,3 +45,5 @@ By doing so, it is possible on the one hand to verify the correctness of the tes
 
 In terms of statemen/brach, a value of 97.1% and 86.6% was obtained respectively.
 What is missing to reach 100% is exclusively due to the execution of the simulink Moving Average block used in the implementation of the model. Therefore, these are not lines of code written by the programmer, but initialization conditions and default correctness check.
+  
+file:///Users/stefano/Desktop/s262832_25062021_MBSD/GoogleTest/all/example-html-details.html

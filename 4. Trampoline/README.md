@@ -29,9 +29,6 @@ goil --target=posix/linux  --templates=../../../goil/templates/ periodic.oil
 export VIPER_PATH=~/trampoline/viper/
 ./periodic_exe
 ```
-
-If you completed all the operations correctly you shall see the following output:
-
 # Trampoline for Posix Targets
 
 POSIX target running Trampoline inside a Unix process. 

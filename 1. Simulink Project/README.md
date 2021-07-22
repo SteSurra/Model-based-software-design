@@ -65,15 +65,17 @@ No controls have been inserted to verify that a complete cycle takes place withi
 <H4> DutyCycleGenerator </H4>
 
 The subsystem consists of a stateflow. in particular, 4 states have been defined:
-1) NO_BLINK: this is the default state.
-2) BLINKER1: if the distance measurement is in the range [10,100], this state is reached. Inside there are two further states LED_ON and LED_OFF which respectively represent LEDs on and off. The transition from one state to another varies in relation to the distance value and a cycle is completed in 0.1 [s].
+
+1. NO_BLINK: this is the default state.
+2. BLINKER1: if the distance measurement is in the range [10,100], this state is reached. Inside there are two further states LED_ON and LED_OFF which respectively represent LEDs on and off. The transition from one state to another varies in relation to the distance value and a cycle is completed in 0.1 [s].
 We note that in the case of distance = 100 [cm] we have no state transition from LED_ON to LED_OFF, but it remains in the LED_ON state. The reason is that 100 [cm] means a duty cycle = 100%. Finally, it returns to NO_BLINK as soon as the transition condition is no longer verified.
-3) BLINKER2 is made similarly to BLINKER1. The transition into this state occurs if distance <10 [cm] or distance> 100 [cm].
+
+3. BLINKER2 is made similarly to BLINKER1. The transition into this state occurs if distance <10 [cm] or distance> 100 [cm].
 Inside there are two further states LED_ON and LED_OFF in which the transition from one state to another occurs every 250 [ms] which means 0.5 [s] to complete a cycle. Also in this case, as soon as the initial condition is no longer valid, it returns to the starting state NO_BLINK.
-4) BLINKER3 is similar to the two previous cases. However, we note that there is no transition condition since it is the last possible scenario: distance = 0 [cm] (i.e. sensor disconnected).
+4. BLINKER3 is similar to the two previous cases. However, we note that there is no transition condition since it is the last possible scenario: distance = 0 [cm] (i.e. sensor disconnected).
 The transition from LED_ON to LED_OFF occurs every 500ms and one cycle is completed in 1 [s].
 
-ErrorMonitoring
+<H4> ErrorMonitoring </H4>
 
 The subsystem consists of a stateflow. In particular we distinguish 3 states:
 1) RESET: is the initial state in which there are no errors (error = false) and in which it remains until the value of the distance received in input is included in the interval [2,400] cm. This range of values is the one reported in the datasheet of the ultrasonic ranging sensor HC_SR04

@@ -78,26 +78,28 @@ The transition from LED_ON to LED_OFF occurs every 500ms and one cycle is comple
 <H4> ErrorMonitoring </H4>
 
 The subsystem consists of a stateflow. In particular we distinguish 3 states:
-1) RESET: is the initial state in which there are no errors (error = false) and in which it remains until the value of the distance received in input is included in the interval [2,400] cm. This range of values is the one reported in the datasheet of the ultrasonic ranging sensor HC_SR04
+
+1. RESET: is the initial state in which there are no errors (error = false) and in which it remains until the value of the distance received in input is included in the interval [2,400] cm. This range of values is the one reported in the datasheet of the ultrasonic ranging sensor HC_SR04
 It follows that the out-of-range measurements have been calculated normally, but identified by an error signal.
 We note that the distance value = 0 [cm] has not been reported as an error (even though it is out of range) because it falls within the case of "sensor disconnected".
-2) CHECK_FOR_ERROR: a trigger pulse is generated every 100 [ms] and the distance value is an average of 4 consecutive measurements: if we get a value out of range before sending an error signal, it is verified that it is really. In fact, it is possible that it is a simple transient error. It follows that before reporting any error, a further 400 [ms] is waited and the next average is considered.
-3) ERROR_STATE: if 400 [ms] have passed since the first report, then the error is reported.
+2. CHECK_FOR_ERROR: a trigger pulse is generated every 100 [ms] and the distance value is an average of 4 consecutive measurements: if we get a value out of range before sending an error signal, it is verified that it is really. In fact, it is possible that it is a simple transient error. It follows that before reporting any error, a further 400 [ms] is waited and the next average is considered.
+3. ERROR_STATE: if 400 [ms] have passed since the first report, then the error is reported.
 We note that if we receive a further measurement out of range, we no longer have to wait for a further 400[ms]: if the previous measurement was wrong, it is assumed that the subsequent one is also wrong. On the other hand, if the new measurement is correct, it immediately returns to the initial RESET state.
 
-TriggerPulseGenerator
+<H4> TriggerPulseGenerator </H4>
 
 The trigger signal remains high for 20 [usec] and it is generated every 100[ms].
 
 The subsystem consists of a stateflow. There are two states:
-1) HIGH: the trigger value is set high.
-2) LOW: the trigger value is set low.
 
-Technical specifications
+1. HIGH: the trigger value is set high.
+2. LOW: the trigger value is set low.
+
+<H2> Technical specifications </H2>
 
 In general, the integration step must be a submultiple of the trigger period: the choice made here was to use an integration step size of 1e-06 seconds in order to:
-1) Respect the above-specified constraint
-2) Get accurate measurements: the higher the integration step size, the lower the accuracy of the measurements.
+- Respect the above-specified constraint
+- Get accurate measurements: the higher the integration step size, the lower the accuracy of the measurements.
 
 Google test
 Before running the google test, some preliminary operations were carried out using simulink tests to help its implementation.

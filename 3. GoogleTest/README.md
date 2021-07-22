@@ -35,13 +35,13 @@ EQ1: 10 <= X <= 100, EQ2: 2 <= X <10, EQ3: 100 <X> = 400, EQ4: X = <2, EQ5: X> 4
 Implementation notes 1: input: echo signal, output: corresponding blinking level. The controller has to translate the Echo signal into the distance. This operation takes time equal to the duration time of the echo signal itself. For these reasons, the subsystem that generates the expected blinking output must have a phase delay equal to this value.
 Implementation Notes 2: The Workspace block writes the input signal data to a workspace. During the simulation, the Workspace block was used to collect the input and output data in the workspace. This data was then used for the google test.
 
-<H2> Google test </H4>
+<H4> Google test </H4>
   
 At this point, starting from the simulink model, algorithm export was done and the corresponding C code (the same that will then be integrated with trampoline under posix) was obtained.
 The ert_main.c file has been modified by adding the test function “test_ert_main”. This test function uses the data collected through the simulation in the previous point. In particular, these values have been stored in four textual files "input_echo.txt", "output_echo.txt", "output_trigger.txt" and "output_blinking.txt" which are read at each "feedback_control_step" to verify if given a "Feedback_contro_U_Echo" the values "feedback_contro_Y_Error", "feedback_contro_Y_Trigger" and "feedback_contro_Y_blinking" correspond to the expected values collected in the corresponding files. In fact, these last variables contain the input and output values of the model.
 By doing so, it is possible on the one hand to verify the correctness of the test, and on the other hand to cross the program code in an exhaustive manner.
 
-<H2> Results </H2>
+<H1> Results </H1>
 
 In terms of statemen/brach, a value of 97.1% and 86.6% was obtained respectively.
 What is missing to reach 100% is exclusively due to the execution of the simulink Moving Average block used in the implementation of the model. Therefore, these are not lines of code written by the programmer, but initialization conditions and default correctness check.

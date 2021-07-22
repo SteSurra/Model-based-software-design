@@ -17,8 +17,9 @@ https://www.electroschematics.com/wp-content/uploads/2013/07/HCSR04-datasheet-ve
 
 
 The behavior of the Sensor is as follows:
--The Ranging Estimator generates a pulse on the Trig signal with pulse duration of at least 10 μs
--The HC-SR04 device produces a response on the Echo signal. The pulse duration is proportional to the measured distance according to the following formula:
+
+- The Ranging Estimator generates a pulse on the Trig signal with pulse duration of at least 10 μs
+- The HC-SR04 device produces a response on the Echo signal. The pulse duration is proportional to the measured distance according to the following formula:
 ```
 distance [cm] = Echo pulse duration [𝜇𝑠] / 58
 ```
@@ -27,6 +28,7 @@ distance [cm] = Echo pulse duration [𝜇𝑠] / 58
 <H2> Ranging estimator </H2>
 
 The ranging estimator measures the distance (by taking 4 consecutive measures and computing the average), and generates an output as follows:
+
 - In case the measure is in between 10cm and 100 cm the Level output blinks with frequency 10 Hz and duty cycle from 10% to 100% depending on the measurement (10cm=10%, 100cm=100%)
 - In case the measurement is outside below 10cm or higher than 100 cm the Level output blinks with frequency 2 Hz and duty cycle 50%
 - In case the sensor is disconnected (no measure is received), the Level output blinks with frequency 1 Hz and duty cycle 50%

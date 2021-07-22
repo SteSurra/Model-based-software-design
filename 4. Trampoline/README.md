@@ -32,19 +32,6 @@ export VIPER_PATH=~/trampoline/viper/
 
 If you completed all the operations correctly you shall see the following output:
 
-**Activation #1**
-**Activation #2
-Activation #3
-Activation #4
-Activation #5
-Activation #6
-Activation #7
-Activation #8
-Activation #9
-Shutdown
-Exiting virtual platform.**
-
-
 # Trampoline for Posix Targets
 
 POSIX target running Trampoline inside a Unix process. 

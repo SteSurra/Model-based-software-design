@@ -121,11 +121,11 @@ TEST(UnitTest, test_terminate){
     
 }
 
-//ADD
-/*Per inizializzare il framework di googletest ed eseguire tutti i test*/
+
+/*To initialize the googletest framework and run all tests*/
 int main(int argc, char *argv[]) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();
 }
-//ADD
+
 

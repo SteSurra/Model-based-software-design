@@ -1,5 +1,8 @@
+# Trampoline
 
-# Installation guide
+Trampoline is a static RTOS (real-time operating system) for small embedded systems: https://github.com/TrampolineRTOS/trampoline
+
+## Installation guide
 
 1. download trampoline
 ```
